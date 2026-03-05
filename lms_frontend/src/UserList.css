@@ -1,0 +1,536 @@
+/* User List Page - Udemy Inspired */
+.students-page-container {
+    background: #f7f9fa;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.students-page-layout {
+    display: flex;
+    max-width: 1340px;
+    margin: 0 auto;
+    gap: 24px;
+}
+
+.students-page-sidebar {
+    flex: 0 0 240px;
+}
+
+.students-page-main {
+    flex: 1;
+}
+
+/* Page Header */
+.students-page-header {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.students-page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin: 0;
+}
+
+.students-page-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-message-all {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #a435f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-message-all:hover {
+    background: #8710d8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(164, 53, 240, 0.3);
+}
+
+/* Students Table Card */
+.students-table-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.students-table-wrapper {
+    overflow-x: auto;
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.students-table thead {
+    background: #f7f9fa;
+    border-bottom: 2px solid #d1d7dc;
+}
+
+.students-table th {
+    padding: 16px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1c1d1f;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.students-table tbody tr {
+    border-bottom: 1px solid #d1d7dc;
+    transition: background 0.2s ease;
+}
+
+.students-table tbody tr:hover {
+    background: #f7f9fa;
+}
+
+.students-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.students-table td {
+    padding: 16px;
+    font-size: 14px;
+    color: #1c1d1f;
+    vertical-align: middle;
+}
+
+/* Student Name Link */
+.student-name-link {
+    text-decoration: none;
+    color: #a435f0;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.student-name-link:hover {
+    color: #8710d8;
+    text-decoration: underline;
+}
+
+/* Student Email */
+.student-email {
+    color: #6a6f73;
+    font-size: 13px;
+}
+
+/* Student Categories */
+.student-categories {
+    font-size: 13px;
+    color: #6a6f73;
+}
+
+/* Actions Cell */
+.student-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-action-primary,
+.btn-action-secondary {
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn-action-primary {
+    color: #ffffff;
+    background: #a435f0;
+}
+
+.btn-action-primary:hover {
+    background: #8710d8;
+    transform: translateY(-1px);
+}
+
+.btn-action-secondary {
+    color: #1c1d1f;
+    background: #ffffff;
+    border: 1px solid #1c1d1f;
+}
+
+.btn-action-secondary:hover {
+    background: #f7f9fa;
+}
+
+.btn-chat-icon {
+    padding: 8px;
+    font-size: 16px;
+    color: #a435f0;
+    background: #f7f9fa;
+    border: 1px solid #d1d7dc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-chat-icon:hover {
+    background: #a435f0;
+    color: #ffffff;
+    border-color: #a435f0;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.message-modal-overlay {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.message-modal-dialog {
+    max-width: 1200px;
+    margin: 1.75rem auto;
+}
+
+.message-modal-content {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.message-modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #d1d7dc;
+    background: #f7f9fa;
+}
+
+.message-modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin: 0;
+}
+
+.message-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #6a6f73;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.message-modal-close:hover {
+    background: #e8ebed;
+    color: #1c1d1f;
+}
+
+.message-modal-body {
+    padding: 24px;
+}
+
+/* Chat Layout */
+.chat-layout {
+    display: flex;
+    gap: 24px;
+    min-height: 600px;
+}
+
+.chat-messages-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages-container {
+    flex: 1;
+    height: 500px;
+    overflow-y: auto;
+    background: #e5ddd5;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #d1d7dc;
+}
+
+.chat-message {
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.chat-message-sent {
+    justify-content: flex-end;
+}
+
+.chat-message-received {
+    justify-content: flex-start;
+}
+
+.chat-bubble {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.chat-bubble-sent {
+    background: #dcf8c6;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-bubble-received {
+    background: #ffffff;
+    border-bottom-left-radius: 2px;
+}
+
+.chat-form-section {
+    flex: 0 0 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message Form */
+.message-form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #d1d7dc;
+}
+
+.message-form-group {
+    margin-bottom: 16px;
+}
+
+.message-form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin-bottom: 8px;
+}
+
+.message-form-textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    color: #1c1d1f;
+    background: #ffffff;
+    border: 1px solid #1c1d1f;
+    border-radius: 4px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    transition: all 0.2s ease;
+}
+
+.message-form-textarea:focus {
+    outline: none;
+    border-color: #a435f0;
+    box-shadow: 0 0 0 2px rgba(164, 53, 240, 0.1);
+}
+
+.message-form-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-send-message {
+    flex: 1;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #a435f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-send-message:hover {
+    background: #8710d8;
+    transform: translateY(-1px);
+}
+
+/* Alert Messages */
+.alert-message {
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.alert-success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.alert-error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Group Message Modal */
+.group-message-modal .message-modal-dialog {
+    max-width: 600px;
+}
+
+/* Empty State */
+.students-empty-state {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.students-empty-icon {
+    font-size: 64px;
+    color: #d1d7dc;
+    margin-bottom: 16px;
+}
+
+.students-empty-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin-bottom: 8px;
+}
+
+.students-empty-text {
+    font-size: 14px;
+    color: #6a6f73;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .students-page-layout {
+        flex-direction: column;
+    }
+
+    .students-page-sidebar {
+        flex: none;
+        width: 100%;
+    }
+
+    .chat-layout {
+        flex-direction: column;
+    }
+
+    .chat-form-section {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .students-page-container {
+        padding: 16px;
+    }
+
+    .students-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .students-page-title {
+        font-size: 24px;
+    }
+
+    .students-table th,
+    .students-table td {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+
+    .student-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-action-primary,
+    .btn-action-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .chat-messages-container {
+        height: 400px;
+    }
+
+    .message-modal-dialog {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .students-table {
+        font-size: 12px;
+    }
+
+    .students-table th,
+    .students-table td {
+        padding: 8px 4px;
+    }
+
+    .btn-action-primary,
+    .btn-action-secondary {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .chat-bubble {
+        font-size: 13px;
+        max-width: 85%;
+    }
+}
+
+/* Scrollbar Styling */
+.chat-messages-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages-container::-webkit-scrollbar-track {
+    background: #e5ddd5;
+}
+
+.chat-messages-container::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 4px;
+}
+
+.chat-messages-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

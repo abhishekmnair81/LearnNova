@@ -1,0 +1,149 @@
+/* FAQ.css - Udemy.com Style (Clean, Modern, Premium) */
+.faq-faq-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f7f9fa;
+    min-height: 100vh;
+}
+
+.faq-faq-header {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1c1d1f;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.faq-faq-header::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #5624d0;
+    border-radius: 2px;
+}
+
+.faq-faq-accordion {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-faq-item {
+    border-bottom: 1px solid #e2e6e9;
+}
+
+.faq-faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-faq-button {
+    background-color: #fff;
+    color: #1c1d1f;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.faq-faq-button:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-faq-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #5624d0;
+}
+
+.faq-faq-button::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #6c757d;
+    transition: transform 0.3s ease;
+}
+
+.faq-faq-button:not(.collapsed)::after {
+    content: '−';
+    transform: rotate(0deg);
+}
+
+.faq-faq-button[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.faq-faq-collapse {
+    background-color: #fff;
+}
+
+.faq-faq-body {
+    padding: 1.5rem;
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-top: 1px solid #e2e6e9;
+    background-color: #fdfdfd;
+}
+
+/* Loading & Error */
+.faq-faq-loading {
+    text-align: center;
+    padding: 3rem;
+    color: #5624d0;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.faq-faq-error {
+    background-color: #fdf4f4;
+    color: #a51c30;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid #fad9d9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-faq-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .faq-faq-header {
+        font-size: 1.75rem;
+    }
+
+    .faq-faq-button {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .faq-faq-body {
+        padding: 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-faq-button {
+        font-size: 0.95rem;
+    }
+}

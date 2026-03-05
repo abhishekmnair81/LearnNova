@@ -1,0 +1,297 @@
+/* View Student Profile - Udemy-inspired Design */
+
+.student-profile-page {
+  min-height: 100vh;
+  background-color: #f7f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Hero Section */
+.student-hero-section {
+  background: linear-gradient(135deg, #2d2f31 0%, #1c1d1f 100%);
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.student-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.student-hero-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Profile Image */
+.student-profile-image-wrapper {
+  flex-shrink: 0;
+}
+
+.student-profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.student-avatar-placeholder {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a435f0 0%, #8710d8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.student-avatar-initials {
+  font-size: 72px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Profile Content */
+.student-profile-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.student-profile-name {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.student-profile-bio {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e4e8eb;
+  margin: 0 0 32px 0;
+  max-width: 700px;
+}
+
+/* Stats Bar */
+.student-stats-bar {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.student-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.student-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c0c4c7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.student-stat-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Action Buttons */
+.student-social-section {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.student-btn {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.student-btn-primary {
+  background-color: #a435f0;
+  color: #fff;
+}
+
+.student-btn-primary:hover {
+  background-color: #8710d8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(164, 53, 240, 0.4);
+}
+
+.student-btn-secondary {
+  background-color: #fff;
+  color: #1c1d1f;
+}
+
+.student-btn-secondary:hover {
+  background-color: #e4e8eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.student-btn-ghost {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.student-btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Loading State */
+.student-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 20px;
+}
+
+.student-loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #e4e8eb;
+  border-top-color: #a435f0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.student-loading-text {
+  font-size: 18px;
+  color: #6a6f73;
+  font-weight: 500;
+}
+
+/* Error State */
+.student-error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 16px;
+  padding: 20px;
+}
+
+.student-error-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #f7d6d6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #d32f2f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.student-error-message {
+  font-size: 20px;
+  color: #1c1d1f;
+  font-weight: 600;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-hero-section {
+    padding: 40px 20px;
+  }
+
+  .student-hero-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .student-profile-name {
+    font-size: 32px;
+  }
+
+  .student-profile-bio {
+    font-size: 16px;
+  }
+
+  .student-stats-bar {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .student-stat-item {
+    align-items: center;
+  }
+
+  .student-social-section {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .student-btn {
+    flex: 1;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-profile-image,
+  .student-avatar-placeholder {
+    width: 140px;
+    height: 140px;
+  }
+
+  .student-avatar-initials {
+    font-size: 56px;
+  }
+
+  .student-profile-name {
+    font-size: 28px;
+  }
+
+  .student-stats-bar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .student-social-section {
+    flex-direction: column;
+  }
+
+  .student-btn {
+    width: 100%;
+  }
+}

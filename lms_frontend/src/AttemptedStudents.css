@@ -1,0 +1,268 @@
+/* AttemptedStudents.css */
+.ud-attempted-students {
+  min-height: 100vh;
+  background-color: #f7f9fa;
+}
+
+.ud-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.ud-layout {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.ud-sidebar {
+  width: 260px;
+  background: white;
+  border-right: 1px solid #e8e9eb;
+  position: fixed;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.ud-main-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 32px;
+}
+
+.ud-content-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e9eb;
+  overflow: hidden;
+}
+
+.ud-card-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid #e8e9eb;
+  background: linear-gradient(135deg, #a435f0, #8628c2);
+}
+
+.ud-header-content {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ud-header-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+}
+
+.ud-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.ud-btn-primary {
+  background: white;
+  color: #5624d0;
+  border: 1px solid white;
+}
+
+.ud-btn-primary:hover {
+  background: #f7f9fa;
+  color: #401b9c;
+  transform: translateY(-1px);
+}
+
+.ud-btn-secondary {
+  background: #5624d0;
+  color: white;
+  border: 1px solid #5624d0;
+}
+
+.ud-btn-secondary:hover {
+  background: #401b9c;
+  border-color: #401b9c;
+  transform: translateY(-1px);
+}
+
+.ud-btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.ud-card-body {
+  padding: 32px;
+}
+
+.ud-loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.ud-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e8e9eb;
+  border-left: 4px solid #5624d0;
+  border-radius: 50%;
+  animation: ud-spin 1s linear infinite;
+}
+
+@keyframes ud-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ud-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ud-alert {
+  padding: 16px 20px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border-left: 4px solid;
+}
+
+.ud-alert-error {
+  background: #fbe8e8;
+  border-color: #c00;
+  color: #1e1e1e;
+}
+
+.ud-alert-info {
+  background: #f0f7fc;
+  border-color: #007bff;
+  color: #1e1e1e;
+}
+
+.ud-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e8e9eb;
+}
+
+.ud-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.ud-table-header {
+  background: #f7f9fa;
+  border-bottom: 2px solid #e8e9eb;
+}
+
+.ud-table-header th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1e1e1e;
+  border-bottom: 1px solid #e8e9eb;
+}
+
+.ud-table-body {
+  background: white;
+}
+
+.ud-table-row {
+  border-bottom: 1px solid #e8e9eb;
+  transition: background-color 0.2s ease;
+}
+
+.ud-table-row:hover {
+  background-color: #f7f9fa;
+}
+
+.ud-table-row:last-child {
+  border-bottom: none;
+}
+
+.ud-table-cell {
+  padding: 20px;
+  font-size: 14px;
+  color: #1e1e1e;
+  vertical-align: middle;
+}
+
+/* Modal enhancements */
+.modal-content {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #a435f0, #8628c2);
+  color: white;
+  border-bottom: none;
+  padding: 20px 24px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ud-layout {
+    flex-direction: column;
+  }
+  
+  .ud-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  
+  .ud-main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .ud-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ud-header-title {
+    font-size: 20px;
+  }
+  
+  .ud-card-body {
+    padding: 20px;
+  }
+  
+  .ud-table-cell {
+    padding: 12px 16px;
+  }
+}

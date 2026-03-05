@@ -1,0 +1,140 @@
+/* add-chapter-Inspired Add Chapter Page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.add-chapter-addchapter-wrapper {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f7f9fa;
+    min-height: 100vh;
+}
+
+.add-chapter-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.add-chapter-card-header {
+    background: linear-gradient(135deg, #5624d0, #6b3dd8);
+    padding: 24px;
+    text-align: center;
+}
+
+.add-chapter-card-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+}
+
+.add-chapter-card-body {
+    padding: 32px;
+}
+
+.add-chapter-form-group {
+    margin-bottom: 24px;
+}
+
+.add-chapter-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1d1f;
+}
+
+.add-chapter-input,
+.add-chapter-textarea,
+.add-chapter-file-input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1.5px solid #d1d7e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.add-chapter-input::placeholder,
+.add-chapter-textarea::placeholder {
+    color: #6a6f7c;
+}
+
+.add-chapter-input:focus,
+.add-chapter-textarea:focus,
+.add-chapter-file-input:focus {
+    outline: none;
+    border-color: #5624d0;
+    box-shadow: 0 0 0 3px rgba(86, 36, 208, 0.15);
+}
+
+.add-chapter-file-input {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-chapter-file-name {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #6a6f7c;
+    font-style: italic;
+}
+
+.add-chapter-submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #5624d0;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-chapter-submit-btn:hover:not(:disabled) {
+    background-color: #401b9c;
+}
+
+.add-chapter-submit-btn:disabled {
+    background-color: #a29bfe;
+    cursor: not-allowed;
+}
+
+.add-chapter-alert {
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.add-chapter-alert-success {
+    background-color: #e6f7e6;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.add-chapter-alert-danger {
+    background-color: #fdf4f4;
+    color: #b32424;
+    border: 1px solid #f5c2c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .add-chapter-card-body {
+        padding: 24px;
+    }
+    .add-chapter-card-title {
+        font-size: 24px;
+    }
+}

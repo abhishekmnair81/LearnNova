@@ -1,0 +1,212 @@
+.courseee-page__container {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f7f9fa;
+  padding: 38px 10px;
+  min-height: 100vh;
+}
+
+.courseee-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.courseee-col--sidebar {
+  flex: 0 0 280px;
+  max-width: 280px;
+  padding: 0 18px 0 0;
+}
+
+.courseee-col--main {
+  flex: 1;
+  padding: 0 12px;
+}
+
+.courseee-card {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 6px 28px rgba(164,53,240,0.11), 0 0px 1px rgba(40,40,40,0.03);
+  margin-bottom: 28px;
+}
+
+.courseee-card__header {
+  font-size: 1.38rem;
+  font-weight: 700;
+  background: #a435f0;
+  color: #fff;
+  text-align: left;
+  padding: 18px 22px;
+  border-radius: 13px 13px 0 0;
+}
+
+.courseee-card__body {
+  padding: 24px;
+}
+
+.courseee-table {
+  width: 100%;
+  border-radius: 11px;
+  overflow: hidden;
+  background: #fff;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 1px 4px rgba(164,53,240,0.03);
+}
+
+.courseee-table__header {
+  background: #f6f1fd;
+  font-weight: 600;
+  font-size: 1.08rem;
+  border-radius: 11px 11px 0 0;
+}
+
+.courseee-table th, .courseee-table td {
+  padding: 15px 16px;
+  border-bottom: 1.5px solid #ececf7;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.courseee-table tbody tr:hover {
+  background: #f6f1fd;
+}
+
+.courseee-course__title {
+  font-weight: 700;
+  color: #a435f0;
+  text-decoration: none;
+  font-size: 1.04rem;
+  transition: color 0.2s;
+}
+
+.courseee-course__title:hover {
+  color: #6621c5;
+  text-decoration: underline;
+}
+
+.courseee-course__img--small {
+  width: 56px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(164,53,240,0.11);
+}
+
+.courseee-course__enrolled {
+  color: #32d49c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.courseee-course__enrolled:hover {
+  text-decoration: underline;
+}
+
+.courseee-course__rating {
+  display: block;
+  color: #a435f0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.courseee-btn {
+  padding: 7px 15px;
+  border-radius: 7px;
+  font-size: 1.01rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.courseee-btn--edit {
+  background: #a435f0;
+  color: #fff;
+}
+
+.courseee-btn--edit:hover {
+  background: #661cd3;
+}
+
+.courseee-btn--add {
+  background: #32d49c;
+  color: #fff;
+}
+
+.courseee-btn--add:hover {
+  background: #219d6f;
+}
+
+.courseee-btn--secondary {
+  background: #f6f1fd;
+  color: #a435f0;
+}
+
+.courseee-btn--secondary:hover {
+  background: #ecebf6;
+  color: #661cd3;
+}
+
+.courseee-btn--warning {
+  background: #f3ec1e;
+  color: #252525;
+}
+
+.courseee-btn--warning:hover {
+  background: #ffef6d;
+  color: #1d1d1d;
+}
+
+.courseee-btn--delete {
+  background: #d7263d;
+  color: #fff;
+}
+
+.courseee-btn--delete:hover {
+  background: #ad1831;
+}
+
+.courseee-me--sm {
+  margin-right: 7px;
+}
+
+.courseee-mt--sm {
+  margin-top: 3px;
+}
+
+.courseee-text--center {
+  text-align: center;
+}
+
+@media (max-width: 1080px) {
+  .courseee-col--sidebar {
+    flex: 0 0 180px;
+    max-width: 180px;
+    padding: 0 7px 0 0;
+  }
+  .courseee-card__body {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .courseee-row {
+    flex-direction: column;
+  }
+  .courseee-col--sidebar, .courseee-col--main {
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 0;
+  }
+  .courseee-card__header {
+    font-size: 1.08rem;
+    padding: 9px 10px;
+  }
+  .courseee-card__body {
+    padding: 7px;
+  }
+}

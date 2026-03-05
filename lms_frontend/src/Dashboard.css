@@ -1,0 +1,353 @@
+/* Dashboard Page Styles - Udemy Inspired */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    background: #f7f9fa;
+    min-height: 100vh;
+}
+
+.dashboard-content {
+    display: flex;
+    max-width: 1340px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 24px;
+    padding: 24px;
+}
+
+.dashboard-sidebar {
+    flex: 0 0 240px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.dashboard-main {
+    flex: 1;
+    background: transparent;
+}
+
+.dashboard-header {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin: 0;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background: #f7f9fa;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.profile-container:hover {
+    background: #e8ebed;
+}
+
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #a435f0;
+    transition: transform 0.2s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.profile-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1c1d1f;
+    transition: color 0.2s ease;
+}
+
+.profile-link:hover {
+    color: #a435f0;
+}
+
+.no-profile-text {
+    color: #6a6f73;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Stats Overview Section */
+.stats-overview {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.stats-overview-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #d1d7dc;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #a435f0, #7c30cf);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    border-color: #a435f0;
+}
+
+.dashboard-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a435f0, #7c30cf);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6a6f73;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.card-count {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin: 0;
+    line-height: 1;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link:hover .card-count {
+    color: #a435f0;
+}
+
+/* Assignment Stats */
+.assignment-stats {
+    margin-top: 12px;
+}
+
+.assignment-stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-top: 1px solid #e8ebed;
+}
+
+.assignment-stat-item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6a6f73;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c1d1f;
+}
+
+.stat-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.stat-link:hover .stat-value {
+    color: #a435f0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 8px;
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #1c1d1f;
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn:hover {
+    background: #a435f0;
+    transform: rotate(90deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-content {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        flex: none;
+        width: 100%;
+        max-width: none;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .dashboard-title {
+        font-size: 24px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-count {
+        font-size: 28px;
+    }
+}

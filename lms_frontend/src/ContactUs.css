@@ -1,0 +1,189 @@
+/* ContactUs.css - Udemy.com Style (Clean, Professional, Awesome) */
+.con-con-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    background-color: #f7f9fa;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.con-con-card,
+.con-con-info-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e6e9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.con-con-card:hover,
+.con-con-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.con-con-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.con-con-icon {
+    color: #5624d0;
+    font-size: 1.5rem;
+}
+
+/* Form */
+.con-con-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.con-con-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.con-con-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1c1d1f;
+    margin-bottom: 0.5rem;
+}
+
+.con-con-input {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #b8bcbf;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #1c1d1f;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.con-con-input:focus {
+    outline: none;
+    border-color: #5624d0;
+    box-shadow: 0 0 0 3px rgba(86, 36, 208, 0.2);
+}
+
+.con-con-textarea {
+    min-height: 140px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.con-con-submit-btn {
+    background-color: #ec5252;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.con-con-submit-btn:hover {
+    background-color: #d93838;
+    transform: translateY(-2px);
+}
+
+.con-con-submit-btn:focus {
+    box-shadow: 0 0 0 3px rgba(236, 82, 82, 0.3);
+}
+
+/* Messages */
+.con-con-message {
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.ud-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.ud-error {
+    background-color: #fdf4f4;
+    color: #a51c30;
+    border: 1px solid #fad9d9;
+}
+
+/* Info Card */
+.con-con-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.con-con-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #1c1d1f;
+}
+
+.con-con-info-icon {
+    color: #5624d0;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.con-con-info-text {
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .con-con-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .con-con-card,
+    .con-con-info-card {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    .con-con-title {
+        font-size: 1.6rem;
+    }
+
+    .con-con-card,
+    .con-con-info-card {
+        padding: 1.75rem;
+    }
+
+    .con-con-submit-btn {
+        font-size: 1rem;
+    }
+}

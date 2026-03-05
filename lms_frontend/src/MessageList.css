@@ -1,0 +1,167 @@
+/* MessageList.css - Udemy-style Messaging UI */
+.msg-list-container {
+  height: 500px;
+  overflow-y: auto;
+  background-color: #f7f9fa;
+  border: 1px solid #d1d7da;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #b8bcbf #f7f9fa;
+}
+
+.msg-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.msg-list-container::-webkit-scrollbar-track {
+  background: #f7f9fa;
+  border-radius: 8px;
+}
+
+.msg-list-container::-webkit-scrollbar-thumb {
+  background: #b8bcbf;
+  border-radius: 8px;
+}
+
+.msg-list-container::-webkit-scrollbar-thumb:hover {
+  background: #9ca0a4;
+}
+
+/* Refresh Button */
+.msg-refresh-btn {
+  background-color: #ec5252;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s ease;
+  margin-left: 12px;
+}
+
+.msg-refresh-btn:hover {
+  background-color: #d93838;
+}
+
+.msg-refresh-btn:disabled {
+  background-color: #b8bcbf;
+  cursor: not-allowed;
+}
+
+.msg-refresh-btn i {
+  font-size: 1rem;
+}
+
+/* Message Item */
+.msg-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Received Message (from student) */
+.msg-received-wrapper {
+  align-self: flex-start;
+  max-width: 75%;
+}
+
+.msg-bubble.msg-received {
+  background-color: #fff;
+  color: #1c1d1f;
+  padding: 10px 14px;
+  border-radius: 8px 8px 8px 0;
+  border: 1px solid #e2e6e9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Sent Message (from teacher) */
+.msg-sent-wrapper {
+  align-self: flex-end;
+  max-width: 75%;
+}
+
+.msg-bubble.msg-sent {
+  background-color: #5624d0;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px 8px 0 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Timestamp */
+.msg-timestamp {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 4px;
+  display: block;
+}
+
+.msg-received-wrapper .msg-timestamp {
+  text-align: left;
+  margin-left: 4px;
+}
+
+.msg-sent-wrapper .msg-timestamp {
+  text-align: right;
+  margin-right: 4px;
+}
+
+/* States */
+.msg-loading,
+.msg-error,
+.msg-empty {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.msg-loading {
+  color: #5624d0;
+  font-weight: 500;
+}
+
+.msg-error {
+  color: #a51c30;
+  background-color: #fdf4f4;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.msg-empty {
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .msg-list-container {
+    height: 400px;
+    padding: 12px;
+  }
+
+  .msg-bubble {
+    max-width: 85%;
+    font-size: 0.9rem;
+  }
+
+  .msg-refresh-btn {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
+}
