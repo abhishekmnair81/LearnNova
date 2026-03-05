@@ -125,16 +125,6 @@ LearnNova uses a **dual OTP-based authentication** system for both Teachers and 
 
 ---
 
-## 🎥 Video Consultations
-
-LearnNova features **real-time video calling** between teachers and students using **WebRTC**:
-
-- Peer-to-peer video/audio streaming
-- Live session joining for enrolled students
-- Doctor/specialist consultation interface (extensible for any domain)
-
----
-
 ## 💬 Real-Time Messaging
 
 Teachers and students can **chat directly** within the platform:
@@ -222,26 +212,6 @@ The frontend will be live at: **`http://localhost:3000`**
 
 ---
 
-## 🛣️ API Highlights
-
-The backend exposes a RESTful API via Django REST Framework:
-
-| Endpoint Pattern | Description |
-|---|---|
-| `/teacher/` | Teacher registration & login |
-| `/student/` | Student registration & login |
-| `/courses/` | Course listing, detail, search |
-| `/chapters/` | Chapter listing per course |
-| `/quiz/` | Quiz creation, assignment, attempt |
-| `/study-materials/` | Upload & access study docs |
-| `/assignments/` | Assign & retrieve student work |
-| `/messages/` | Chat messages between teacher & student |
-| `/contact/` | Contact form submission |
-| `/faq/` | Frequently asked questions |
-| `/ratings/` | Course ratings & reviews |
-
----
-
 ## 🧑‍💼 Admin Panel
 
 LearnNova's Django admin is fully configured with descriptive plural names for all 18 models:
@@ -251,26 +221,6 @@ LearnNova's Django admin is fully configured with descriptive plural names for a
 - Monitor enrollments and ratings
 - Respond to contact queries
 - Manage FAQs
-
----
-
-## 📬 Contact & Email Integration
-
-LearnNova has built-in **email handling** via Django's `send_mail`:
-
-- Auto-replies to contact form submissions
-- OTP emails for registration and password reset
-
-Configure your email settings in `lms_api/settings.py`:
-
-```python
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your-app-password'
-```
 
 ---
 
@@ -286,11 +236,6 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👨‍💻 Author
 
@@ -300,11 +245,3 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abhishekmnair81@gmail.com)
 
 ---
-
-<div align="center">
-
-**⭐ If you found LearnNova useful, please star the repo — it means a lot!**
-
-*Built with ❤️ using Django & React*
-
-</div>
